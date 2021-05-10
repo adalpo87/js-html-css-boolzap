@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app" class="container">
+
+        <aside class="left">
+            <div class="header-left">
+                <div class="user">
+                    <img src="assets/img//avatar_io.jpg" alt="">
+                    <h5>Nome Utente</h5>
+                </div>
+
+
+                <div class="awesome">
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+
+            </div>
+            <div class="main-left">
+                <div class="img-notif">
+                    <i class="fas fa-bell-slash"></i>
+                </div>
+                <div class="text-notif">
+                    <h5>Ricevi notifiche di nuovi messaggi</h5>
+                    <p>Attiva notifiche desktop</p>
+                </div>
+
+            </div>
+
+            <!-- Parte JAVASCRIPT -->
+
+
+            <div class="input-chat">
+
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Cerca o inizia una nuova chat">
+
+            </div>
+            
+
+
+            <div class="user-list">
+                
+                <ul>
+                  <li v-for="user in contacts">
+                    <img :src="'assets/img/avatar' + user.avatar + '.jpg'" alt="">
+                      <p>{{ user.name}}</p>
+                  </li>
+                </ul>
+            </div>
+             <!-- Parte JAVASCRIPT -->
+        </aside>
+
+
+
+
+        <main class="right">
+
+            <header>
+                <div class="user">
+                    <img src="assets/img//avatar_1.jpg" alt="">
+                    <div class="text-notif2">
+                        <h5>Michele</h5>
+                        <p>Ultimo accesso oggi alle</p>
+                    </div>
+                </div>
+                <div class="awesome">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-paperclip"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </header>
+           
+
+            <section class="main-right">
+
+              <div class="main-section">
+                  
+                <div class="msg-user-right">
+
+                    <div class="nuvola">
+                        <p>ciao alessandro.</p>
+                        <i class="fas fa-check"></i>
+                        <p class="msg-timer">inviato alle ore 12:00</p>
+                    </div>
+                    
+
+                </div>
+
+                <div class="msg-user-left">
+
+                    <div class="nuvola">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam saepe dolor beatae. Alias asperiores modi nemo cum voluptatem earum, eum quisquam repellat quas vel omnis aperiam impedit obcaecati non vitae!
+                        </p>
+                        <i class="fas fa-check"></i>
+                        <p class="msg-timer">inviato alle ore 12:00</p>
+                    </div>
+                  
+
+                </div>
+              
+                
+
+              </div>
+
+             <!--  <div class="main-scroll">
+                 
+              </div> -->
+
+            </section>
+
+            <footer>
+                <i class="far fa-smile"></i>
+                <input type="text" placeholder="Scrivi un messaggio">
+                <i class="fas fa-microphone"></i>
+            </footer>
+
+        </main>
+
+
+
+
+
+
+
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

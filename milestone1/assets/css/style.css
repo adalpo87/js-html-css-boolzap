@@ -205,16 +205,17 @@ body{
     padding-top: 50px;
     background-image: url(../img/mine.jpg);
     position: relative;
+    overflow-y: scroll;
     
 }
-.main-scroll{
+/* .main-scroll{
     width: 10px;
     height: 100%;
     background-color: white;
     position: absolute;
     right: 0;
     top:0;
-}
+} */
 
 
 /* messaggistica */
@@ -234,7 +235,7 @@ body{
 .nuvola i{
     position: absolute;
     right: 12px;
-    top: 40%;
+    bottom: 12%;
     transform: translatey(-50%);
     color: grey;
     display: none;
@@ -259,6 +260,7 @@ body{
     background-color: white;
     margin-right: 80px;
     float: right;
+    clear: both ;
     background-color: rgb(130, 255, 151);
 }
 
@@ -267,6 +269,7 @@ body{
     background-color: white;
     margin-left: 80px;
     float: left;
+    clear: both ;
 }
 
 

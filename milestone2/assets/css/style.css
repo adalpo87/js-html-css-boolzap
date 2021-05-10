@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: 
+        linear-gradient(to bottom,
+            #249688 0px,
+            #249688 15%,
+            #DADBD4 15%,
+            #DADBD4 100%
+            );
+    font-family: 'Lato', sans-serif;
+}
+
+
+.container{
+    height: 95%;
+    background-color: white;
+    width: 80%;
+    min-width: 900px;
+}
+
+.container .left,
+.container .right{
+    float: left;
+    height: 100%;
+}
+
+.container .left{
+    width: 35%;
+}
+
+.container .right{
+    width: 65%;
+}
+
+.container .right header,
+.container .right footer{
+    height: 70px;
+    background-color: #f3f3f0;
+}
+
+.container .right section{
+    height: calc(100% - 140px);
+    width: 100%;
+}
+
+
+/* Parte Sinistra */
+
+/* HEADER LEFT */
+.header-left{
+    height: 70px;
+    width: 100%;
+    background-color: #f3f3f0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user{
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.user img{
+    height: 74%;
+    border-radius: 999px;
+}
+
+.awesome{
+    display: flex;
+    align-items: center;
+}
+
+.awesome i{
+    margin-right: 15px;
+    color: grey;
+}
+
+/* MAIN-Left */
+
+.main-left{
+    width: 100%;
+    height: 75px;
+    background-color: #19e9e9;
+    display: flex;
+}
+
+.img-notif{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 18px;
+}
+
+.img-notif i{
+    font-size: 23px;
+    color: #19e9e9;
+    background-color: white;
+    border-radius: 999px;
+    padding: 12px;
+}
+
+.text-notif{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.text-notif h5{
+    font-size: 90%;
+}
+
+.text-notif p{
+    font-size: 80%;
+    text-decoration: underline;
+    color: lightslategray;
+}
+.input-chat{
+    text-align: center;
+    width: 98%;
+    background-color: white;
+    height: 30px;
+    margin: 4px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(240, 241, 243);
+}
+.input-chat i{
+    margin-left: 10px;
+    font-size: 85%;
+    color: lightslategray;
+}
+.input-chat input{
+    width: 90%;
+    height: 25px;
+    border: none;
+    outline: none;
+}
+
+/* USER LIST */
+.user-list{
+    height: calc(100% - 180px);
+    width: 94%;
+    margin: auto;
+    border-right: 1px solid rgb(240, 241, 243);
+    overflow: auto;
+
+}
+
+.user-list ul li{
+    height: 75px;
+    width: 100%;
+    border-bottom: 1px solid rgb(240, 241, 243);
+    position: relative;  
+    list-style: none;
+}
+.user-list ul li img{
+    height: 75px;
+    border-radius: 999px;
+    padding: 8px;
+}
+.user-list ul li p{
+    position: absolute;
+    top: 10px;
+    left: 80px;
+}
+
+
+/* PARTE DESTRA */
+
+/* header-right */
+.right header{
+    display: flex;
+    justify-content: space-between;
+    border-left: 1px solid rgb(188, 189, 190);
+}
+
+.text-notif2 h5{
+    font-size: 90%;
+    margin-left: 15px;
+}
+
+.text-notif2 p{
+    font-size: 80%;
+    color: lightslategray;
+    margin-left: 15px;
+}
+
+/* main-right */
+.main-right{
+    padding-top: 50px;
+    background-image: url(../img/mine.jpg);
+    position: relative;
+    overflow-y: scroll;
+    
+}
+/* .main-scroll{
+    width: 10px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top:0;
+} */
+
+
+/* messaggistica */
+.nuvola{
+    width: 280px;
+    padding: 15px 15px;
+    border-radius: 10px;
+    position: relative;
+}
+.msg-timer{
+    position:absolute;
+    font-size: 9px;
+    color: lightslategray;
+    right: 4px;
+}
+
+.nuvola i{
+    position: absolute;
+    right: 12px;
+    bottom: 12%;
+    transform: translatey(-50%);
+    color: grey;
+    display: none;
+}
+
+.nuvola:hover i{
+    display: inline;
+}
+
+
+
+.msg-user-right{
+    height: 60px;
+    width: 100%;
+}
+.msg-user-left{
+    height: 60px;
+    width: 100%;
+}
+/* messaggio di destra */
+.msg-user-right div{
+    background-color: white;
+    margin-right: 80px;
+    float: right;
+    clear: both ;
+    background-color: rgb(130, 255, 151);
+}
+
+/* messaggio di sinistra */
+.msg-user-left div{
+    background-color: white;
+    margin-left: 80px;
+    float: left;
+    clear: both ;
+}
+
+
+/* FOOTER */
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer input{
+    height: 75%;
+    width: 85%;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    padding: 12px;
+}
+
+footer i{
+    color: grey;
+}
