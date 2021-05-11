@@ -90,7 +90,8 @@
             },
         ],
         
-        activeIndex: 0
+        activeIndex: 0,
+        myText: ''
         
 
     },
@@ -99,9 +100,38 @@
 
         avatarImg(avatar){
             return `assets/img/avatar${avatar}.jpg`
+        },
+
+        newMessage(){
+            this.contacts[this.activeIndex].messages.push(
+                {
+                    date: '10/01/2020 15:30:55',
+                    text: this.myText,
+                    status: 'sent'
+                });
+            setTimeout(()=>{
+                this.contacts[this.activeIndex].messages.push(
+                    {
+                        date: '10/01/2020 15:30:55',
+                        text: 'ok!',
+                        status: 'receveid'
+                    });
+            }, 1000)
         }
+
 
     }
 
+    
 
  })
+
+
+ /* Milestone 3
+Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa 
+e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
+Risposta dall’interlocutore: ad ogni inserimento di un messaggio, 
+l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo. */
+
+/* Creo una funzione dove tramite v-model verrà salvato il messaggio e l ora
+successivamente verrà pushato all'interno dell array. utilizziamo l activeIndex */

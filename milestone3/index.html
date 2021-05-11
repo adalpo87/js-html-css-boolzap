@@ -46,7 +46,8 @@
             <div class="input-chat">
 
                 <i class="fas fa-search"></i>
-                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                <input type="text" 
+                placeholder="Cerca o inizia una nuova chat">
 
             </div>
             
@@ -118,10 +119,13 @@
 
             <footer>
                 <i class="far fa-smile"></i>
-                <input type="text" placeholder="Scrivi un messaggio">
+                <input type="text" 
+                       v-model="myText"
+                       @keyup.enter="newMessage()"
+                       placeholder="Scrivi un messaggio">
                 <i class="fas fa-microphone"></i>
             </footer>
-
+            
         </main>
 
 
