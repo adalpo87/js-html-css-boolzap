@@ -253,10 +253,12 @@ body{
 .sent{
     height: 60px;
     width: 100%;
+    margin-bottom: 30px;
 }
 .receveid{
     height: 60px;
     width: 100%;
+    margin-bottom: 30px;
 }
 /* messaggio di destra */
 .sent div{

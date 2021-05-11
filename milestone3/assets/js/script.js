@@ -91,7 +91,8 @@
         ],
         
         activeIndex: 0,
-        myText: ''
+        myText: '',
+        timeNow: dayjs().format('DD/MM/YYYY H-mm-ss')
         
 
     },
@@ -105,18 +106,20 @@
         newMessage(){
             this.contacts[this.activeIndex].messages.push(
                 {
-                    date: '10/01/2020 15:30:55',
+                    date: this.timeNow,
                     text: this.myText,
                     status: 'sent'
                 });
+            this.myText = '';
             setTimeout(()=>{
                 this.contacts[this.activeIndex].messages.push(
                     {
-                        date: '10/01/2020 15:30:55',
+                        date: this.timeNow,
                         text: 'ok!',
                         status: 'receveid'
                     });
-            }, 1000)
+            }, 1000);
+            
         }
 
 
