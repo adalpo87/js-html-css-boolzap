@@ -92,8 +92,8 @@
         
         activeIndex: 0,
         myText: '',
-        timeNow: dayjs().format('DD/MM/YYYY H-mm-ss')
-        
+        timeNow: dayjs().format('DD/MM/YYYY H-mm-ss'),
+        timeNow2: dayjs().format('H-mm')
 
     },
     
@@ -129,12 +129,3 @@
 
  })
 
-
- /* Milestone 3
-Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa 
-e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
-Risposta dall’interlocutore: ad ogni inserimento di un messaggio, 
-l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo. */
-
-/* Creo una funzione dove tramite v-model verrà salvato il messaggio e l ora
-successivamente verrà pushato all'interno dell array. utilizziamo l activeIndex */
