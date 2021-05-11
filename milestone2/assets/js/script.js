@@ -88,14 +88,19 @@
                     }
                 ],
             },
-        ]
+        ],
+        
+        activeIndex: 0
         
 
     },
     
     methods:{
 
-    
+        avatarImg(avatar){
+            return `assets/img/avatar${avatar}.jpg`
+        }
+
     }
 
 

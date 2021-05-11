@@ -160,6 +160,9 @@ body{
     overflow: auto;
 
 }
+.user-list ul li.active{
+    background-color: lightgray;
+}
 
 .user-list ul li{
     height: 75px;
@@ -247,16 +250,16 @@ body{
 
 
 
-.msg-user-right{
+.sent{
     height: 60px;
     width: 100%;
 }
-.msg-user-left{
+.receveid{
     height: 60px;
     width: 100%;
 }
 /* messaggio di destra */
-.msg-user-right div{
+.sent div{
     background-color: white;
     margin-right: 80px;
     float: right;
@@ -265,7 +268,7 @@ body{
 }
 
 /* messaggio di sinistra */
-.msg-user-left div{
+.receveid div{
     background-color: white;
     margin-left: 80px;
     float: left;
