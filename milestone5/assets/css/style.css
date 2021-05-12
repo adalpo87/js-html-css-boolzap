@@ -314,9 +314,19 @@ footer i{
 /* MENU A TENDINA */
 
 .delete-msg{
-    background-color: lightgray;
+    background-color: rgb(238, 236, 236);
     list-style: none;
     position: absolute;
     top: 50px;
     padding: 5px;
+    display: none;
+}
+.delete-msg.active{
+    display: inline;
+}
+
+.delete-msg ul li{
+    list-style: none;
+    padding: 2px;
+    z-index: 999;
 }

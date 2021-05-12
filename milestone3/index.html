@@ -61,7 +61,9 @@
                     :class="activeIndex === index ?'active' : null"
                   >
                     <img :src="avatarImg(user.avatar)" alt="">
-                      <p>{{ user.name }}</p>
+                      <p class="user-name">{{ user.name }}</p>
+                      <p class="user-text">{{ lastText(index) }}</p>
+                      <p class="user-date">{{lastAccess(index)}}</p>
                   </li>
                 </ul>
             </div>

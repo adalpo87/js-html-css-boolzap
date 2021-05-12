@@ -102,12 +102,16 @@
 
                     <div class="nuvola">
                         <p>{{ message.text }}</p>
-                        <i class="fas fa-times close"></i>
                         <i class="fas fa-check check"></i>
                         <p class="msg-timer">{{message.date}}</p>
-                        <span class="delete-msg">
-                            Delete message
+
+                        <span class="delete-msg"
+                              :class="">
+                            <ul>
+                                <li>Delete message</li>
+                            </ul>
                         </span>
+
                     </div>
                     
                 </div>

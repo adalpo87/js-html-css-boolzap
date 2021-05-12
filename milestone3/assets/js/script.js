@@ -126,8 +126,15 @@
         lastAccess(index){
             let contact = this.contacts[index].messages;
             return contact[contact.length - 1].date;
+        },
+        lastText(index){
+            let userText = this.contacts[index].messages;
+            if(userText[userText.length - 1].text.length > 20){
+               let sliceText = userText[userText.length - 1].text.slice(0, 30) + '...';
+               return sliceText
+            }
+            return userText[userText.length - 1].text;
         }
-        
 
 
     }
