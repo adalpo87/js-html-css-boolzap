@@ -252,7 +252,7 @@ body{
 .nuvola i{
     position: absolute;
     right: 12px;
-    bottom: 12%;
+    bottom: 25%;
     transform: translatey(-50%);
     color: grey;
     display: none;

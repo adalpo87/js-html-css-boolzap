@@ -176,10 +176,24 @@ body{
     border-radius: 999px;
     padding: 8px;
 }
-.user-list ul li p{
+.user-list ul li .user-name{
     position: absolute;
     top: 10px;
     left: 80px;
+}
+.user-list ul li .user-date{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 12px;
+    color: gray;
+}
+.user-list ul li .user-text{
+    position: absolute;
+    bottom: 15px;
+    left: 80px;
+    font-size: px;
+    color: gray;
 }
 
 
@@ -238,7 +252,7 @@ body{
 .nuvola i{
     position: absolute;
     right: 12px;
-    bottom: 12%;
+    bottom: 25%;
     transform: translatey(-50%);
     color: grey;
     display: none;

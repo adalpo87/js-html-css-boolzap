@@ -92,10 +92,9 @@
         
         activeIndex: 0,
         myText: '',
-        nameText: '',
-        timeNow: dayjs().format('DD/MM/YYYY H-mm-ss'),
-        timeNow2: dayjs().format('H-mm')
-
+        timeNow: dayjs().format('DD/MM/YYYY H:mm:ss'),
+        timeNow2: dayjs().format('H-mm'),
+        findName: ''
     },
     
     methods:{
@@ -105,9 +104,10 @@
         },
 
         newMessage(){
+            if(this.myText.length > 0){
             this.contacts[this.activeIndex].messages.push(
                 {
-                    date: this.timeNow,
+                    date: dayjs().format('DD/MM/YYYY H:mm:ss'),
                     text: this.myText,
                     status: 'sent'
                 });
@@ -115,17 +115,45 @@
             setTimeout(()=>{
                 this.contacts[this.activeIndex].messages.push(
                     {
-                        date: this.timeNow,
+                        date: dayjs().format('DD/MM/YYYY H:mm:ss'),
                         text: 'ok!',
                         status: 'receveid'
                     });
             }, 1000);
             
+        }},
+
+        lastAccess(index){
+            let contact = this.contacts[index].messages;
+            return contact[contact.length - 1].date;
         },
-       
+        lastText(index){
+            let userText = this.contacts[index].messages;
+            if(userText[userText.length - 1].text.length > 30){
+               let sliceText = userText[userText.length - 1].text.slice(0, 30) + '...';
+               return sliceText
+            }
+            return userText[userText.length - 1].text;
+        },
+        nameCheck(){
+            this.contacts.forEach(contact => {
+                if (contact.name.toLowerCase().includes(this.findName)){
+                    contact.visible = true;
+                }else{
+                    contact.visible = false;
+                }
+            });
+        }
+
     }
 
+    /*
+    di base la condizione per poter vedere i nomi è visible = true
+
+    quando noi scriviamo, parte un controllo, 
+    se le lettere sono diverse allora allora visible diventa false e quindi scompare */
     
+    /*  */
 
  })
 

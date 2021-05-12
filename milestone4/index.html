@@ -40,47 +40,52 @@
 
             </div>
 
-            <!-- Parte JAVASCRIPT -->
+            <!-- Ricerca Utente -->
 
 
             <div class="input-chat">
 
                 <i class="fas fa-search"></i>
                 <input type="text" 
-                v-model="nameText"
-                placeholder="Cerca o inizia una nuova chat">
+                v-model="findName"
+                placeholder="Cerca o inizia una nuova chat"
+                @keyup="nameCheck()"
+                >
                 
             </div>
-               
-
+            
+            <!-- Lista Utenti -->
 
             <div class="user-list">
                 
                 <ul>
-                  <li v-for="(user, index) in contacts"
+                  <li 
+                    v-for="(user, index) in contacts"
                     @click="activeIndex = index"
                     :class="activeIndex === index ?'active' : null"
-                    v-if="user.name.toLowerCase().includes(nameText)"
+                    v-if="user.visible === true"
                   >
                     <img :src="avatarImg(user.avatar)" alt="">
-                      <p>{{ user.name }}</p>
+                      <p class="user-name">{{ user.name }}</p>
+                      <p class="user-text">{{ lastText(index) }}</p>
+                      <p class="user-date">{{lastAccess(index)}}</p>
                   </li>
                 </ul>
             </div>
-             <!-- Parte JAVASCRIPT -->
+             
         </aside>
-
+        
 
 
 
         <main class="right">
-
+            <!-- Utente Attivo -->
             <header>
                 <div class="user">
                     <img :src="avatarImg(contacts[activeIndex].avatar)" alt="">
                     <div class="text-notif2">
                         <h5>{{contacts[activeIndex].name}}</h5>
-                        <p>Ultimo accesso oggi alle {{timeNow2}}</p>
+                        <p>Ultimo accesso oggi alle {{lastAccess(activeIndex)}}</p>
                     </div>
                 </div>
                 <div class="awesome">
@@ -90,7 +95,7 @@
                 </div>
             </header>
            
-
+            <!-- Chat Utente Attivo -->
             <section class="main-right">
 
               <div class="main-section" 
@@ -118,7 +123,7 @@
               </div> -->
 
             </section>
-
+            <!-- INPUT INSERISCI TESTO -->
             <footer>
                 <i class="far fa-smile"></i>
                 <input type="text" 
@@ -130,7 +135,7 @@
             
         </main>
 
-
+        
 
 
 

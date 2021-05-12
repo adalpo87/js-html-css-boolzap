@@ -129,7 +129,7 @@
         },
         lastText(index){
             let userText = this.contacts[index].messages;
-            if(userText[userText.length - 1].text.length > 20){
+            if(userText[userText.length - 1].text.length > 30){
                let sliceText = userText[userText.length - 1].text.slice(0, 30) + '...';
                return sliceText
             }
