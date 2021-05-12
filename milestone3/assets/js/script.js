@@ -92,7 +92,7 @@
         
         activeIndex: 0,
         myText: '',
-        timeNow: dayjs().format('DD/MM/YYYY H-mm-ss'),
+        timeNow: dayjs().format('DD/MM/YYYY H:mm:ss'),
         timeNow2: dayjs().format('H-mm')
 
     },
@@ -104,9 +104,10 @@
         },
 
         newMessage(){
+            if(this.myText.length > 0){
             this.contacts[this.activeIndex].messages.push(
                 {
-                    date: this.timeNow,
+                    date: dayjs().format('DD/MM/YYYY H:mm:ss'),
                     text: this.myText,
                     status: 'sent'
                 });
@@ -114,16 +115,23 @@
             setTimeout(()=>{
                 this.contacts[this.activeIndex].messages.push(
                     {
-                        date: this.timeNow,
+                        date: dayjs().format('DD/MM/YYYY H:mm:ss'),
                         text: 'ok!',
                         status: 'receveid'
                     });
             }, 1000);
             
+        }},
+
+        lastAccess(index){
+            let contact = this.contacts[index].messages;
+            return contact[contact.length - 1].date;
         }
+        
 
 
     }
+
 
     
 
