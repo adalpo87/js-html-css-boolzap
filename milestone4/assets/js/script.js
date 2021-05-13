@@ -95,6 +95,7 @@
         timeNow: dayjs().format('DD/MM/YYYY H:mm:ss'),
         timeNow2: dayjs().format('H-mm'),
         findName: ''
+
     },
     
     methods:{
@@ -145,15 +146,12 @@
             });
         }
 
+
+
     }
 
-    /*
-    di base la condizione per poter vedere i nomi è visible = true
 
-    quando noi scriviamo, parte un controllo, 
-    se le lettere sono diverse allora allora visible diventa false e quindi scompare */
     
-    /*  */
 
  })
 

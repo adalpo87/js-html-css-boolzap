@@ -40,27 +40,26 @@
 
             </div>
 
-            <!-- Ricerca Utente -->
+            <!-- Parte JAVASCRIPT -->
 
 
             <div class="input-chat">
 
                 <i class="fas fa-search"></i>
                 <input type="text" 
-                v-model="findName"
                 placeholder="Cerca o inizia una nuova chat"
+                v-model="findName"
                 @keyup="nameCheck()"
                 >
-                
+        
             </div>
             
-            <!-- Lista Utenti -->
+
 
             <div class="user-list">
                 
                 <ul>
-                  <li 
-                    v-for="(user, index) in contacts"
+                  <li v-for="(user, index) in contacts"
                     @click="activeIndex = index"
                     :class="activeIndex === index ?'active' : null"
                     v-if="user.visible === true"
@@ -72,14 +71,14 @@
                   </li>
                 </ul>
             </div>
-             
+             <!-- Parte JAVASCRIPT -->
         </aside>
-        
+
 
 
 
         <main class="right">
-            <!-- Utente Attivo -->
+
             <header>
                 <div class="user">
                     <img :src="avatarImg(contacts[activeIndex].avatar)" alt="">
@@ -95,7 +94,7 @@
                 </div>
             </header>
            
-            <!-- Chat Utente Attivo -->
+
             <section class="main-right">
 
               <div class="main-section" 
@@ -123,7 +122,7 @@
               </div> -->
 
             </section>
-            <!-- INPUT INSERISCI TESTO -->
+
             <footer>
                 <i class="far fa-smile"></i>
                 <input type="text" 
@@ -135,7 +134,7 @@
             
         </main>
 
-        
+
 
 
 
